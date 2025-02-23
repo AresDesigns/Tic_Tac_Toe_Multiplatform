@@ -7,6 +7,9 @@ export default defineConfig({
   server: {
     port: 3002
   },
+  assets: {
+    'flags/**': ['svg'], // Indica que los archivos SVG en el directorio flags serán procesados
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
