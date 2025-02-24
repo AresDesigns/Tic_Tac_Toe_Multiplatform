@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const GameScreen = ({ mode, onGameEnd }) => {
+  const { t } = useTranslation();
   const [board, setBoard] = useState(Array(9).fill(null));
   const [currentPlayer, setCurrentPlayer] = useState('X');
   const [winner, setWinner] = useState(null);
@@ -90,9 +92,9 @@ const GameScreen = ({ mode, onGameEnd }) => {
 
   return (
     <div className="game-screen">
-      <h1>Tic Tac Toe</h1>
+      {/*<h1 className="text-4xl mb-4">{t('title')}</h1>*/}
       <div className="turn-display">
-        Turn: {currentPlayer}
+      {t('turn')}: {currentPlayer}
       </div>
       <div className="board">
         {board.map((cell, index) => (
@@ -101,21 +103,21 @@ const GameScreen = ({ mode, onGameEnd }) => {
           </div>
         ))}
       </div>
-      <button onClick={handleEndGame}>Finalizar Partida</button>
+      <button onClick={handleEndGame}>{t('endGame')}</button>
       {showResultDialog && (
         <div className="result-dialog">
-          <h2>{isDraw ? "It's a Draw!" : `${winner} wins!`}</h2>
+          <h2 className="text-2xl mb-4">{isDraw ? "It's a Draw!" : `${winner} wins!`}</h2>
           <p>Player 1 Wins: {player1Wins}</p>
           <p>Player 2 Wins: {player2Wins}</p>
-          <button onClick={resetGame}>Volver a jugar</button>
-          <button onClick={onGameEnd}>Ir al inicio</button>
+          <button onClick={resetGame}>{t('playAgain')}</button>
+          <button onClick={onGameEnd}>{t('mainMenu')}</button>
         </div>
       )}
       {showEndGameDialog && (
         <div className="end-game-dialog">
-          <h2>¿Desea salir?</h2>
-          <button onClick={confirmEndGame}>Sí</button>
-          <button onClick={cancelEndGame}>No</button>
+          <h2 className="text-2xl mb-4">{t('endGame')}</h2>
+          <button onClick={confirmEndGame}>{t('Yes')}</button>
+          <button onClick={cancelEndGame}>{t('No')}</button>
         </div>
       )}
     </div>
