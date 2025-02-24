@@ -74,7 +74,7 @@ tic-tac-toe/
 - React: Una biblioteca de JavaScript para construir interfaces de usuario.
 - Vite: Una herramienta de construcción que busca proporcionar una experiencia de desarrollo más rápida y ligera para proyectos web modernos.
 - Tailwind CSS: Un framework de CSS de utilidad primero para construir rápidamente interfaces de usuario personalizadas.
-- Redux: Una biblioteca de JavaScript para la gestión del estado de la aplicación.
+- Redux: Una biblioteca de JavaScript para la gestión del estado de la aplicación en la que esta pendiente su incorporación de la rama de desarrollo.
 ## Personalizaciones
 ## Animación de Fondo
 La animación de fondo se logra utilizando keyframes de CSS y utilidades de Tailwind CSS. La capa de fondo se desplaza infinitamente hacia la izquierda, creando un efecto de movimiento continuo.
