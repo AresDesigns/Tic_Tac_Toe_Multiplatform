@@ -20,6 +20,7 @@ Esta es una aplicación de Tic Tac Toe construida con **React**, **Vite**, **Tai
 
 ### Pantalla de la partida
 
+![Pantalla de la partida](assets/wall1.png)
 
 ## Instalación
 
