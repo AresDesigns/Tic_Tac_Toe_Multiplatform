@@ -13,7 +13,7 @@ const MenuScreen = ({ onSelect }) => {
 
   return (
     <div className="menu-screen">
-      <h1>{t('title')}</h1>
+      <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
       <button onClick={() => onSelect('1vs1')}>{t('start1vs1')}</button>
       <button onClick={() => onSelect('1vsBot')}>{t('start1vsBot')}</button>
       <div className="language-selector">

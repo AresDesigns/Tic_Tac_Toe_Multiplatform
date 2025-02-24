@@ -92,7 +92,7 @@ const GameScreen = ({ mode, onGameEnd }) => {
 
   return (
     <div className="game-screen">
-      <h1>{t('title')}</h1>
+      {/*<h1 className="text-4xl mb-4">{t('title')}</h1>*/}
       <div className="turn-display">
       {t('turn')}: {currentPlayer}
       </div>
@@ -106,7 +106,7 @@ const GameScreen = ({ mode, onGameEnd }) => {
       <button onClick={handleEndGame}>{t('endGame')}</button>
       {showResultDialog && (
         <div className="result-dialog">
-          <h2>{isDraw ? "It's a Draw!" : `${winner} wins!`}</h2>
+          <h2 className="text-2xl mb-4">{isDraw ? "It's a Draw!" : `${winner} wins!`}</h2>
           <p>Player 1 Wins: {player1Wins}</p>
           <p>Player 2 Wins: {player2Wins}</p>
           <button onClick={resetGame}>{t('playAgain')}</button>
@@ -115,7 +115,7 @@ const GameScreen = ({ mode, onGameEnd }) => {
       )}
       {showEndGameDialog && (
         <div className="end-game-dialog">
-          <h2>{t('endGame')}</h2>
+          <h2 className="text-2xl mb-4">{t('endGame')}</h2>
           <button onClick={confirmEndGame}>{t('Yes')}</button>
           <button onClick={cancelEndGame}>{t('No')}</button>
         </div>

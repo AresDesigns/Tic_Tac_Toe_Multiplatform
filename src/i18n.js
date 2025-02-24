@@ -26,6 +26,7 @@ const resources = {
       "No": "No",
       "draw": "Draw",
       "english": "English",
+      "loading": "Loading...",
       "spanish": "Spanish"
     }
   },
@@ -52,6 +53,7 @@ const resources = {
       "language": "Idioma",
       "english": "Inglés",
       "endGame": "Finalizar Partida",
+      "loading": "Cargando...",
       "spanish": "Español"
     }
   }
